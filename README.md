@@ -9,7 +9,7 @@ Sistema automatizado de generación de presentaciones PowerPoint profesionales u
 
 - 🤖 **Generación automática con IA** - Google Gemini (gratis) o Claude AI
 - 🎨 **4 Temas profesionales** - Modern Blue, Dark, Professional, Vibrant
-- 🖥️ **Interfaz moderna** - CustomTkinter con tema oscuro y tabs organizadas
+- 🖥️ **Interfaz gráfica** - CustomTkinter con tema oscuro y tabs organizadas
 - 📄 **Conversión LaTeX/PDF** - Transforma documentos a PowerPoint
 - 📝 **Conversión de texto** - Formato estructurado a presentaciones
 - ⚡ **Detección automática** - Elige la API disponible automáticamente
@@ -87,7 +87,7 @@ ANTHROPIC_API_KEY=tu_api_key_aqui
 
 ### Interfaz Gráfica (Recomendado)
 
-Ejecuta la aplicación con interfaz moderna:
+Ejecuta la aplicación:
 
 ```bash
 python gui_app.py
@@ -119,47 +119,6 @@ python gui_app.py
 - 💼 **Professional** - Clásico corporativo
 - 🌈 **Vibrant** - Colorido y dinámico
 
-### Línea de Comandos
-
-#### 1. Generar contenido con IA:
-```python
-from claude.claude_integration import ClaudeIntegration
-
-# Detección automática de API (Gemini o Claude)
-ai = ClaudeIntegration(provider="auto")
-
-# Generar contenido
-content = ai.generate_presentation_content(
-    topic="Inteligencia Artificial y Machine Learning",
-    num_slides=5,
-    style="profesional"
-)
-
-# Guardar contenido
-ai.save_to_file(content, "mi_presentacion.txt")
-print(f"✅ Usando: {ai.provider} - Modelo: {ai.model}")
-```
-
-#### 2. Convertir texto a PowerPoint:
-```python
-from scripts.text_to_pptx import TextToPptxConverter
-
-# Crear conversor con tema específico
-converter = TextToPptxConverter(theme="modern_blue")
-converter.convert("mi_presentacion.txt", "presentacion.pptx")
-```
-
-#### 3. Convertir LaTeX/PDF a PowerPoint:
-```python
-from scripts.latex_to_pptx import LatexToPptxConverter
-
-converter = LatexToPptxConverter()
-# Desde PDF:
-converter.convert("documento.pdf", "presentacion.pptx")
-# Desde LaTeX:
-converter.convert("documento.tex", "presentacion.pptx")
-```
-
 ### Ejecutar Tests
 
 Verifica que todo funcione correctamente:
@@ -173,38 +132,6 @@ python test_complete.py
 - ✅ Test de conversión texto → PowerPoint
 - ✅ Test de conversión LaTeX → PowerPoint
 - ✅ Test de conversión PDF → PowerPoint
-
-## 📖 Formato de Texto para Presentaciones
-
-El contenido generado o manual debe seguir este formato estructurado:
-
-```
-Diapositiva 1: Título Principal de la Presentación
-- Este será el título en la portada
-- Puedes agregar un subtítulo aquí
-
-Diapositiva 2: Primer Tema Importante
-- Primera viñeta con contenido relevante
-- Segunda viñeta con más información
-- Tercera viñeta para completar la idea
-- Cuarta viñeta opcional
-
-Diapositiva 3: Segundo Tema Importante
-- Punto clave número uno
-- Punto clave número dos
-- Punto clave número tres
-
-Diapositiva 4: Conclusiones
-- Resumen de puntos principales
-- Llamado a la acción
-- Contacto o referencias
-```
-
-**Notas importantes:**
-- Cada diapositiva debe comenzar con `Diapositiva N:` seguido del título
-- Usa guiones (`-`) para las viñetas
-- La primera diapositiva será la portada
-- Cada diapositiva puede tener entre 2-6 viñetas
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -330,11 +257,16 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ## 👤 Autor
 
 **Salvador0302**
+- GitHub: [@Salvador0302](https://github.com/Salvador0302)
 
 ## 🙏 Agradecimientos
 
-- Claude AI de Anthropic por la generación de contenido
-- python-pptx por la manipulación de PowerPoint
+Agradecimiento especial al **Profesor Kelvin (Alexander) Aquino Ynga** por su guía y enseñanzas en el desarrollo de este proyecto. Su apoyo fue fundamental para convertir esta idea en realidad.
+
+- Google Gemini por proporcionar una API gratuita de IA
+- Anthropic Claude AI por la excelente calidad de generación de contenido
+- python-pptx por la librería de manipulación de PowerPoint
+- CustomTkinter por el framework moderno de interfaces
 - La comunidad de código abierto
 
 ---
