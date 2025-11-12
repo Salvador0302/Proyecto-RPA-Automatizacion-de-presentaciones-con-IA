@@ -23,7 +23,7 @@ Proyecto-RPA-Automatizacion-de-presentaciones-con-Claude/
 ├─ test_complete.py           # 🧪 Suite completa de pruebas
 ├─ requirements.txt           # 📦 Dependencias del proyecto
 ├─ .env                       # 🔐 Configuración de API keys (no incluido)
-├─ .env.example              # 📄 Plantilla de configuración
+├─ .env.example               # 📄 Plantilla de configuración
 ├─ LICENSE                    # 📜 Licencia MIT
 ├─ scripts/
 │  ├─ latex_to_pptx.py       # Conversor LaTeX/PDF → PowerPoint
